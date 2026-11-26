@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="ca">
+<head>
+    <meta charset="UTF-8">
+    <title>Tasca 3 - Exercici 7</title>
+    <style>
+        body {
+            font-family: "Times New Roman", Times, serif;
+            margin: 20px;
+        }
+        table.principal {
+            border-collapse: separate;
+            border-spacing: 2px;
+            border: 1px solid #888;
+            width: 720px;
+            margin: 0 auto;
+        }
+        table.principal > tbody > tr > td {
+            border: 1px solid #888;
+            padding: 6px;
+            font-size: 13px;
+        }
+        caption {
+            font-size: 13px;
+            margin-bottom: 4px;
+        }
+        /* Estils per a la subtaula interna */
+        table.subtaula {
+            border-collapse: collapse;
+            margin: 5px auto;
+            background-color: #ffff99;
+        }
+        table.subtaula td {
+            border: 1px solid #555;
+            padding: 2px 5px;
+            text-align: center;
+            font-size: 12px;
+        }
+    </style>
+</head>
+<body>
+
+    <table class="principal" id="taula-b">
+        <caption>Taula B. Resultat</caption>
+
+        <!-- Fila 1 -->
+        <tr>
+            <!-- Cel·la blava esquerra: Formulari (ocupa 3 files) -->
+            <td rowspan="3" style="background-color: #2200ff; width: 32%; vertical-align: top; text-align: center;">
+                <strong>Formulari</strong>
+                <form action="#" method="post" style="margin-top: 8px; font-size: 12px;">
+                    Nom: <input type="text" name="nom" size="12"><br><br>
+                    Pass: <input type="password" name="pass" size="12"><br><br>
+                    <input type="radio" name="opcio" value="1">
+                    <input type="radio" name="opcio" value="2"><br><br>
+                    <input type="checkbox" name="check1">
+                    <input type="checkbox" name="check2"><br><br>
+                    <select name="llista">
+                        <option>Entre 16 i 20</option>
+                        <option>Més de 20</option>
+                    </select><br><br>
+                    <input type="submit" value="Enviar">
+                    <input type="reset" value="Borrar">
+                </form>
+            </td>
+
+            <!-- Cel·la vermella superior dreta: Estils de lletres -->
+            <td colspan="2" style="background-color: #ff0000; vertical-align: top; text-align: left;">
+                <div>Aquí provar tots els estils de lletres</div>
+                <p style="margin-top: 8px; line-height: 1.4;">
+                    <b>Negreta</b> <i>Itàlica</i> <u>Subratllat</u> <del>Ratllat</del> 
+                    <small>Lletra petita</small> <big>Lletra gran</big> 
+                    <sub>Subíndex</sub> <sup>Superíndex</sup>
+                </p>
+            </td>
+        </tr>
+
+        <!-- Fila 2 -->
+        <tr>
+            <!-- Cel·la grisa central-dreta: Enllaços -->
+            <td colspan="2" style="background-color: #a6a6a6; vertical-align: top; text-align: right;">
+                <div>Aquí provar tots els tipus d'enllaços</div>
+                <div style="margin-top: 12px; text-align: center;">
+                    <a href="#top">Tornar al menú</a> | 
+                    <a href="tasca3-exercici6.html">Tornar a la Taula A. Estructura</a> | 
+                    <a href="https://google.com" target="_blank">Google</a> | 
+                    <a href="https://google.com" target="_blank">Calendari</a>
+                </div>
+            </td>
+        </tr>
+
+        <!-- Fila 3 -->
+        <tr>
+            <!-- Cel·la rosa: Llista ordenada (ocupa 3 files) -->
+            <td rowspan="3" style="background-color: #ff007f; width: 34%; vertical-align: top; text-align: left;">
+                <div>Exemple de llistes ordenades</div>
+                <ol style="margin-top: 15px; padding-left: 25px;">
+                    <li>Aplicacions Web</li>
+                    <li>Sistemes operatius en xarxa</li>
+                    <li>Seguretat</li>
+                    <li>Bases de dades</li>
+                </ol>
+            </td>
+
+            <!-- Cel·la verda: Llista desordenada (ocupa 3 files) -->
+            <td rowspan="3" style="background-color: #00e639; width: 34%; vertical-align: middle; text-align: left;">
+                <div style="text-align: right;">Exemple de llistes desordenades</div>
+                <ul style="margin-top: 15px; padding-left: 25px;">
+                    <li>Aplicacions Web</li>
+                    <li>Sistemes operatius en xarxa</li>
+                    <li>Seguretat</li>
+                    <li>Bases de dades</li>
+                </ul>
+            </td>
+        </tr>
+
+        <!-- Fila 4 -->
+        <tr>
+            <!-- Cel·la groga inferior esquerra: Subtaula (ocupa 3 files) -->
+            <td rowspan="3" style="background-color: #ffff00; vertical-align: top; text-align: center;">
+                <div>Inserirem un altre taula</div>
+                <div style="margin-top: 8px; font-size: 12px;">
+                    Taula<br>Prova
+                </div>
+                <table class="subtaula">
+                    <tr>
+                        <td rowspan="2">A</td>
+                        <td>B</td>
+                        <td>C</td>
+                        <td>D</td>
+                    </tr>
+                    <tr>
+                        <td colspan="2">E</td>
+                        <td>F</td>
+                    </tr>
+                    <tr>
+                        <td>G</td>
+                        <td>H</td>
+                        <td>I</td>
+                        <td>J</td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+
+        <!-- Fila 5 (espaiador per als rowspans) -->
+        <tr style="height: 30px;"></tr>
+
+        <!-- Fila 6 -->
+        <tr>
+            <!-- Cel·la blava inferior dreta: Imatge -->
+            <td colspan="2" style="background-color: #2200ff; vertical-align: top; text-align: center;">
+                <div>Imatge</div>
+                <!-- Substitueix 'imatge.jpg' pel nom del teu arxiu d'imatge -->
+                <img src="imatge.jpg" alt="Exemple d'imatge" width="140" height="75" style="margin-top: 6px; border: 1px solid #000;">
+            </td>
+        </tr>
+
+        <!-- Fila 7: Peu de taula amb codi font -->
+        <tr>
+            <td colspan="3" style="background-color: #ffffff; text-align: center;">
+                <div>Aquí hi anirà el codi font</div>
+                <div style="margin-top: 8px; font-size: 11px;">
+                    <code>function comprovar(){ if (document.f1.nom.value==""){alert("Alt! no potser!"); return 0;} }</code>
+                </div>
+            </td>
+        </tr>
+    </table>
+
+</body>
+</html>
